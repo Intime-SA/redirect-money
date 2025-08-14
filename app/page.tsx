@@ -12,7 +12,7 @@ export default function WhatsAppRedirect() {
 
     const redirectTimer = setTimeout(() => {
       // Cambia este número por el tuyo
-      const phoneNumber = "5491168702318" // Formato: código país + número sin espacios ni símbolos
+      const phoneNumber = process.env.NEXT_PUBLIC_API_NUMBER // Formato: código país + número sin espacios ni símbolos
       const message = "Hola! Quiero registrarme codigo referencia: 36764"
       const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
 
